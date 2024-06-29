@@ -1,0 +1,19 @@
+  .srv-dtl-btn{
+    background-image: linear-gradient(#8debeb,#8abcee);
+    color:darkmagenta ;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    /* width: 100px; */
+    margin:10px;
+    margin-left: 20px;
+  }
+  
+  #nav-all a.active{
+    background: linear-gradient(90deg,#f5ff6d,#57e09e);
+    border-radius: 5px;
+    text-decoration: underline;
+    color:white
+  }
+  
+  

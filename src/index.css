@@ -1,0 +1,41 @@
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+  gap : 5px
+}
+.card{
+  width : 350px;
+  height: 100px;
+  margin : 10px;
+  margin-left : 50px
+}
+.card-text{
+  font-size: 14px;
+}
+.card-img-top{
+  /* width : 100px;
+  height: 120px; */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.add-serv-btn{
+  border-radius: 10px;
+  background-color: #004D97;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  width: 80px;
+  height: 40px;
+  /* margin-left: 50px;
+  margin-bottom: -250px; */
+  position: absolute;
+  top : 45%;
+  right: 68%;
+}
+
+.card{
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 2px #a3e47b;
+  /* box-shadow:; */
+}
