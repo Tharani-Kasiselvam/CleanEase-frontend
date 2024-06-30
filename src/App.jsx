@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       loader: servicesLoader,
     },
     {
-      path : "category",
+      path : "/category",
       element : <Service_Details />
     }
   ]

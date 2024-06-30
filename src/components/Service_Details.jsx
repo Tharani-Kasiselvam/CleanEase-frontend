@@ -1,13 +1,12 @@
 import { useContext } from "react"
-import { CleanServicesContext } from "./Services"
+import { useNavigate } from "react-router-dom"
 
 
 const Service_Details = () => {
-    console.log('Inside SERVICE_DETAILS')
-    const {selectedServiceCategory} = useContext(CleanServicesContext)
-
+    const navigate = useNavigate()
   return (
   <div>
+     {/* {navigate("/category")} */}
         <div className="container-fluid">
             <div className="row">
                 <div className="col-md-6">

@@ -1,15 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import cleanServices from '../services/cleanServices.js'
 import { FaRegHandPointRight } from "react-icons/fa";
-import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom"
-import { createContext, useState } from "react"
-import Service_Details from "./Service_Details.jsx";
+import { useState } from "react"
 import '../App.css'
 import Location from "./Location.jsx";
 import { useNavigate } from 'react-router-dom'
-
-export const CleanServicesContext = createContext()
 
 export const loader = async () => {
     console.log("Inside Loader")
@@ -23,7 +19,6 @@ const Services = () => {
     const [selectedServiceCategory, setSelectedServiceCategory] = useState("")
 
     const { allServices } = useLoaderData();
-    // const {id} = useParams()
     const navigate = useNavigate()
 
 
@@ -52,15 +47,14 @@ const Services = () => {
         setSelServiceName(e.target.innerText)
     }
 
-    const ServiceInfo = (selectedServiceCategory) => {
-        { console.log("inside ServiceInfo", selectedServiceCategory) }
-        { navigate("/category") }
-        <Service_Details selectedServiceCategory={selectedServiceCategory} />
+    const ServiceInfo = (selServCat) => {
+        setSelectedServiceCategory(selServCat);
+        console.log("inside ServiceInfo",selServCat);
+        navigate("/category")
     }
 
     return (
         <div>
-            <CleanServicesContext.Provider value={{ services_list }}>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col" style={{ maxWidth: "350px", backgroundColor: "white" }}>
@@ -108,9 +102,9 @@ const Services = () => {
                                                             className="card-img-top"
                                                             style={{ width: "120px", height: "100px" }} />
                                                         <div><button className="add-serv-btn">ADD</button></div><br />
-                                                        <button className="srv-dtl-btn" onClick={() => ServiceInfo(service, service.category)}>
+                                                        <button className="srv-dtl-btn" onClick={()=>ServiceInfo(service)}>
+                                                        {/* onClick={() => ServiceInfo(service, service.category)} */}
                                                             Service Details <FaRegHandPointRight size={25} style={{ paddingBottom: "6px" }} />
-
                                                         </button>
                                                     </div>
                                                     <div className="col" style={{ marginLeft: "-20px" }}>
@@ -132,13 +126,9 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    {/* </div>
-                </div> */}
-                    {/* </div> */}
-                </div>
-                <Outlet />
 
-            </CleanServicesContext.Provider>
+                </div>
+                {/* <Outlet /> */}
         </div>
     )
 }
