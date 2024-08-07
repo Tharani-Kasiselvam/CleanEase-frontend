@@ -1,4 +1,6 @@
-  .srv-dtl-btn{
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kalnia+Glaze:wght@700&family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+
+.srv-dtl-btn{
     background-image: linear-gradient(#8debeb,#8abcee);
     color:darkmagenta ;
     font-weight: bold;
@@ -16,4 +18,39 @@
     color:white
   }
   
+  .row{
+    display : flex;
+    flex-wrap : wrap;
+  }
+
+
+.forgot-div{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    width:400px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-top: 10px;
+    border: 3px solid black;
+    text-align: center;
+    font-weight: 900;
+    font-size : 25px;
+    color : darkred;
+    background-image: linear-gradient(#e7e7f4, #9fca9e);
+}
+
+.recover-div{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    width:400px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-top: 10px;
+    border: 3px solid black;
+    text-align: center;
+    font-weight: 900;
+    font-size : 25px;
+    color : darkred;
+    background-image: linear-gradient(#f47d99, #edeb6d);
+}
   

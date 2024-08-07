@@ -1,14 +1,14 @@
 const Location = ({locationList}) => {
     let i = 0
-    const loadLocations = () => {
-        console.log(locationList)
-        locationList.map(location => {
-            return (
-                <option value={location}>{location}</option>
-            )
-        }
-        )
-    }
+    // const loadLocations = () => {
+    //     console.log(locationList)
+    //     locationList.map(location => {
+    //         return (
+    //             <option value={location}>{location}</option>
+    //         )
+    //     }
+    //     )
+    // }
 
     const onSelectChange = () => {
 
