@@ -1,20 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-
+import loginServices from '../services/loginServices';
+import { useToast } from "./ToastContext";
 
 const Login = () => {
+
+  const toast = useToast()
+  const navigate = useNavigate()
 
   const validate = (values) => {
     const errors = {}
 
-    if (!values.firstname)
-        errors.firstname = "Enter Student First Name"
-
-    if (!values.lastname)
-    errors.lastname = "Enter Student Last Name"
-
     if (!values.email)
-    errors.email = "Enter Student Email Id"
+       errors.email = "Enter Email Id"
 
     if (!values.password)
         errors.password = "Enter password"
@@ -30,37 +28,21 @@ const Login = () => {
     validate,
     onSubmit : values => {
       console.log("Formik submission")
-      // handleLogin();
+      loginServices.login(values.email,values.password)
+      .then(response => {
+        toast.addToast('Login Success','success')
+        userFormik.resetForm()
+        // redirect to Services page
+        setTimeout(() => {
+          navigate("/services");
+        }, 500);
+      })
+      .catch(error => {
+        console.log(error)
+        toast.addToast(`Login Failed: ${error.response.data.error}`,'danger')
+      });
     }
   })
-
-  const handleLogin = (e) => {
-
-    e.preventDefault(); 
-
-    //NEED TO VERIFY BELOW FUNCTION PARAMS
-
-    // perform user login
-    // userServices.login(email, password)
-    //   .then(response => {
-    //     // alert(response.data.message);
-    //     toast.addToast('Login Success','success')
-
-    //     // clear the form
-    //     setEmail("");
-    //     setPassword("");
-
-    //     // redirect to dashboard page
-    //     setTimeout(() => {
-    //       navigate("/dashboard");
-    //     }, 500);
-
-    //   })
-    //   .catch(error => {
-    //     // alert(error.response.data.message);
-    //     toast.addToast(`Login Failed: ${error.response.data.message}`)
-    //   });
-  }
 
   const error_style = {
     color: "red"
