@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kalnia+Glaze:wght@700&family=Playwrite+DK+Loopet:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@700&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@700&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@700&family=Pacifico&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Kalnia+Glaze:wght@700&family=Pacifico&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Germania+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Kalnia+Glaze:wght@700&family=Margarine&family=Pacifico&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .go-back{
   margin-top: 20px;
@@ -21,12 +25,92 @@
     text-decoration: underline;
     color:white
   }
-  
+
+  #glob-nav a.active{
+    /* background: linear-gradient(90deg,#f5ff6d,#57e09e); */
+    border-radius: 5px;
+    text-decoration: underline;
+    color:rgb(30, 3, 81);
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-style: italic
+  }
+
+  #glob-nav-font{
+    font-family: "Pacifico", cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color : brown;
+    background: linear-gradient(90deg,#cbec69,#56c8eb);
+
+  }
+
+  #nav-font{
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #cart-font{
+    font-family: "Playwrite DK Loopet", cursive;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #serv-nav-font{
+    font-family: "Kalam", cursive;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  #glob-nav-div{
+    background: linear-gradient(90deg,#57e09e,#56c8eb);
+  }
+
   .row{
     display : flex;
     flex-wrap : wrap;
   }
 
+ #login-hdr{
+  background: linear-gradient(90deg,#4b75d0,#be72d8,#95598238);
+  color: white;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+ }
+
+ #reg-hdr{
+  background: linear-gradient(90deg,#de4760,#be72d8,#95598238);
+  color: white;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+ }
+
+ #home-hdr{
+  background: linear-gradient(90deg,darkred,#b0e839,#23140338);
+  color: white;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+ }
+
+ #home_cont{
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+ }
+
+ .home-icons{
+  display : flex;
+  flex-wrap : wrap;
+  gap : 50px
+ }
 
 .forgot-div{
     font-family: "EB Garamond", serif;

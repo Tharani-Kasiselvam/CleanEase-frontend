@@ -16,11 +16,6 @@ const ServicesProvider = ({children}) => {
     const [productCategory, setProductCategory] = useState([{}])
     const [services_list, setServices_list] = useState()
     const [cart_service_list,setCart_service_list] = useState([])
-    // const [buttonTxt,setButtonTxt] = useState("ADD")
-
-    // const { allServices } = useLoaderData();
-    // const navigate = useNavigate()
-
 
     useEffect(()=>{
         loader().then((res)=>{
@@ -30,17 +25,10 @@ const ServicesProvider = ({children}) => {
         })
     },[])
 
-
-    // const services_list = allServices.data.services_list
-    // console.log(services_list)
-
-
     const updateServiceCategory = (selServCat) => {
         console.log("inside updateServiceCategory", selServCat);
         console.log("testing the category", selServCat.exclusions);
-        // console.log(selServCat[0])
         setProductCategory(selServCat)
-        // navigate("/services/category")
     }
 
     const getProductCategory = () => {

@@ -78,6 +78,7 @@ const LoadAllSevices = () => {
                                                 <NavLink
                                                     to={`/services/${servId}`}
                                                     className="nav-link"
+                                                    id="serv-nav-font"
                                                     style={{ color: "brown", fontWeight: "bold" }}
                                                     onClick={onNavLinkClick}>
                                                     {serviceName}

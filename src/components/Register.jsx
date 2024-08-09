@@ -57,9 +57,9 @@ const Register = () => {
     <div>
         <div className="container mt-5">
           <div className="row">
-            <div className="col-md-6 offset-md-3">
+            <div className="col-md-6 offset-md-3" style={{marginLeft:"-25px"}}>
               <div className="card">
-                <div className="card-header">
+                <div className="card-header" id="reg-hdr">
                   Register
                 </div>
                 <div className="card-body">
