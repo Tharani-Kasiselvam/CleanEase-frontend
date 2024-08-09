@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kalnia+Glaze:wght@700&family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@700&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.go-back{
+  margin-top: 20px;
+}
 .srv-dtl-btn{
     background-image: linear-gradient(#8debeb,#8abcee);
     color:darkmagenta ;
@@ -73,4 +77,51 @@
   margin-bottom: 10px;
   margin-left: 10px;
 }
-  
+ 
+#common-txt{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#timeslot{
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px 0px;
+}
+
+.line{
+  width: 90%;
+  margin-left: 25px;
+}
+
+.main{
+  margin : 50px;
+  background-color: azure;
+  width: 80%;
+  border-radius: 50px;
+ }
+
+#cart-row{
+  width: 90%;
+  display : flex;
+  flex-wrap : wrap;
+  border-radius: 5px;
+  padding-left: 30px;
+  border : 1px grey solid;
+  box-shadow: 0px 3px 0px 0px;
+  margin : 5px;
+  margin-bottom : 10px
+}
+
+#tot-price{
+  width: 90%;
+  display : flex;
+  flex-wrap : wrap;
+  border-radius: 5px;
+  padding-left: 30px;
+}
+
+#cart-col{
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

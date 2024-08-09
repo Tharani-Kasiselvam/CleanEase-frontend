@@ -7,10 +7,15 @@ import { add, minus, reset, selectCartCount } from '../features/cartCounterSlice
 import { FaRegHandPointRight } from "react-icons/fa";
 
 const ServiceComponent = ({ service }) => {
-    const {updateServiceCategory,productCategory, buttonTxt,setButtonTxt} = useContext(cleanServicesContext)
+    // const {updateServiceCategory,productCategory, buttonTxt,setButtonTxt} = useContext(cleanServicesContext)
+    const {updateServiceCategory} = useContext(cleanServicesContext)
+
     const [selserviceName, setSelServiceName] = useState("All")
     const navigate = useNavigate()
     const dispatch = useDispatch();
+
+    // const [buttonTxt,updateBtnTxt] = useState("ADD")
+
 
     let addBtn = 0
 
@@ -19,18 +24,16 @@ const ServiceComponent = ({ service }) => {
         updateServiceCategory(service)
     }
 
-    const loadCartCount = (e) => {
-        console.log("INside loadCARTcount -- btnTxt",buttonTxt)
-        if(buttonTxt=="ADD"){
-            setButtonTxt("REMOVE")
-            dispatch(add(1))
-        }
-        if(buttonTxt=="REMOVE"){
-            setButtonTxt("ADD")
-            dispatch(minus(1))
-        }
-    }
-
+    // const loadCartCount = () => {
+    //     if(buttonTxt=="ADD"){
+    //      updateBtnTxt("REMOVE");
+    //      dispatch(add(1))
+    //     }
+    //     else{
+    //         updateBtnTxt("ADD")
+    //         dispatch(minus(1))   
+    //      }
+    // }
     const price_load = (price, ofr_price) => {
         if (ofr_price == "") {
             return <b>{price}</b>
@@ -52,7 +55,8 @@ const ServiceComponent = ({ service }) => {
                     alt={service.img}
                     className="card-img-top"
                     style={{ width: "120px", height: "100px" }} />
-                <div><button className="add-serv-btn" id="add-btn" key={addBtn++} onClick={loadCartCount}>{buttonTxt}</button></div><br />
+                {/* <div><button className="add-serv-btn" id="add-btn" key={addBtn++} onClick={loadCartCount}>{buttonTxt}</button></div> */}
+                <br />
                 <button className="srv-dtl-btn"
                     onClick={() => loadServiceDetails(service)}
                 >

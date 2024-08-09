@@ -1,10 +1,15 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { add, minus, reset, selectCartCount } from '../features/cartCounterSlice'
 
 const HomeNav = () => {
   const cartCount = useSelector(selectCartCount);
-
+  
+  const navigate = useNavigate()
+  const handleCart = (e) => {
+    e.preventDefault()
+    navigate("/cart")
+  }
 
   return (
     <div>
@@ -29,7 +34,7 @@ const HomeNav = () => {
                 <Link className="nav-link" to="/services">Services</Link>
               </li>
             </ul>
-            <form className="d-flex">
+            <form className="d-flex" onSubmit={handleCart}>
               <button className="btn btn-outline-dark" type="submit">
                 {/* <i className="bi-cart-fill me-1"></i> */}
                 Cart

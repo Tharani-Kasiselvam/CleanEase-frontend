@@ -15,7 +15,8 @@ export async function loader(){
 const ServicesProvider = ({children}) => {
     const [productCategory, setProductCategory] = useState([{}])
     const [services_list, setServices_list] = useState()
-    const [buttonTxt,setButtonTxt] = useState("ADD")
+    const [cart_service_list,setCart_service_list] = useState([])
+    // const [buttonTxt,setButtonTxt] = useState("ADD")
 
     // const { allServices } = useLoaderData();
     // const navigate = useNavigate()
@@ -46,10 +47,15 @@ const ServicesProvider = ({children}) => {
         return {productCategory}
     }
 
+    const addCartServiceList = (loadCartItems) => {
+        console.log(">>>",loadCartItems)
+        setCart_service_list([...cart_service_list, loadCartItems])
+    }
+
     return (
         <div>
             <cleanServicesContext.Provider value = {{services_list,updateServiceCategory,productCategory,
-                buttonTxt, setButtonTxt
+                cart_service_list, addCartServiceList
             }}>
             {children}
             {/* <Outlet /> */}

@@ -11,8 +11,6 @@ const LoadAllSevices = () => {
     const {services_list, updateServiceCategory,productCategory, buttonTxt,setButtonTxt} = useContext(cleanServicesContext)
     const [selserviceName, setSelServiceName] = useState("All")
 
-    let buttonVal = "ADD"
-
     // const dispatch = useDispatch();
     let i = 0
     // let addBtn = 0
@@ -33,7 +31,7 @@ const LoadAllSevices = () => {
     console.log("Inside LoadAllServices-check serv list",services_list)
 
     // let productData = getProductCategory()
-    console.log("type verify",typeof productCategory)
+    // console.log("type verify",typeof productCategory)
 
     // const navigate = useNavigate()
 
@@ -98,7 +96,7 @@ const LoadAllSevices = () => {
                     <div className="col" style={{ marginLeft: "-50px" }}>
                         <div className="card-deck">
                             {/* Iterating the list of services and storing it into Cards based on the Cleaning Service selection */}
-                            {console.log("value of productCategory:",productCategory)}
+                            {/* {console.log("value of productCategory:",productCategory)} */}
                             {services_list.map((service, index) => {
                                 if ((selserviceName == service.service_name) || selserviceName == "All") {
                                     return (
