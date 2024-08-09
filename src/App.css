@@ -209,3 +209,7 @@
   font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.form-control{
+  height: 30px;
+}

@@ -23,6 +23,12 @@ const Register = () => {
     if (!values.password)
         errors.password = "Enter password"
 
+    if (!values.address)
+        errors.address = "Enter Address"
+
+    if (!values.mobilenum)
+        errors.mobilenum = "Enter Mobile number"
+
     return errors
 }
 
@@ -31,13 +37,15 @@ const Register = () => {
       firstname : "",
       lastname : "",
       email : "",
-      password : ""
+      password : "",
+      address : "",
+      mobilenum : ""
     },
     validate,
     onSubmit : values => {
       console.log("Formik submission")
 
-      registerServices.register(values.firstname, values.lastname,values.email, values.password)
+      registerServices.register(values.firstname, values.lastname,values.email, values.password,values.address,values.mobilenum)
       .then((response) => {
         toast.addToast(`Registration Success: ${response.data.message}`,"success")
         console.log(response.data.message)
@@ -91,6 +99,20 @@ const Register = () => {
                         {...registerFormik.getFieldProps('password')}/>
                     </div>
                     {registerFormik.errors.password ? <div style={error_style}>{registerFormik.errors.password}</div> : null}
+                    <br />
+                    <div className="mb-3">
+                      <label htmlFor="addr" className="form-label">Address</label>
+                      <textarea type="text" className="form-control" id="address" 
+                        {...registerFormik.getFieldProps('address')}/>
+                    </div>
+                    {registerFormik.errors.address ? <div style={error_style}>{registerFormik.errors.address}</div> : null}
+                    <br />
+                    <div className="mb-3">
+                      <label htmlFor="mob" className="form-label">Mobile Num</label>
+                      <input type="text" className="form-control" id="mobilenum" 
+                        {...registerFormik.getFieldProps('mobilenum')}/>
+                    </div>
+                    {registerFormik.errors.mobilenum ? <div style={error_style}>{registerFormik.errors.mobilenum}</div> : null}
                     <br />
                     <button type="submit" className="btn btn-primary">Register</button>
               </form>

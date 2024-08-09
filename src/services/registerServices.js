@@ -4,13 +4,15 @@ import { instance } from './instance';
 // define the register services
 const registerServices = {
     // register a new user
-    register: async (firstname,lastname, email, password) => {
+    register: async (firstname,lastname, email, password, address, mobilenum) => {
         // make a POST request to the register endpoint
         return await instance.post('/register', {
             firstname,
             lastname,
             email,
-            password
+            password,
+            address,
+            mobilenum
         })
     },
 

@@ -50,8 +50,8 @@ const ServiceComponent = ({ service }) => {
                     {/* <br /> */}
                     <h5 className="card-text">{service.category}</h5>
                     <div className="card-text">{price_load(service.price, service.offer_price)}</div>
-                    <br />
-                    <div className="card-text"><b>Location :</b> <Location locationList={service.location} /></div>
+                    {/* <br /> */}
+                    {/* <div className="card-text"><b>Location :</b> <Location locationList={service.location} /></div> */}
                 </div>
             </div>
         </div>
