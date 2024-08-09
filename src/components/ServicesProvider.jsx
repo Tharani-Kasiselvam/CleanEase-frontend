@@ -52,10 +52,16 @@ const ServicesProvider = ({children}) => {
         setCart_service_list([...cart_service_list, loadCartItems])
     }
 
+    const rmvIdFromCartServiceList = (rmvId) => {
+        console.log(rmvId)
+        const cart_afterDelId =  cart_service_list.filter(cartData => cartData.id !=rmvId)
+        setCart_service_list(cart_afterDelId)
+    }
+
     return (
         <div>
             <cleanServicesContext.Provider value = {{services_list,updateServiceCategory,productCategory,
-                cart_service_list, addCartServiceList
+                cart_service_list, addCartServiceList, rmvIdFromCartServiceList
             }}>
             {children}
             {/* <Outlet /> */}

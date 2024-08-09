@@ -13,7 +13,11 @@ export const cartCounterSlice = createSlice({
             state.cartCount += action.payload
         },
         minus : (state, action) => {
-            state.cartCount -= action.payload
+            if(state.cartCount>0){
+                state.cartCount -= action.payload
+            }
+            else
+                state.cartCount = 0
         },
         reset : state => {
             state.cartCount = 0
