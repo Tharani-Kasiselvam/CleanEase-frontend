@@ -36,6 +36,7 @@ const HomeNav = () => {
               </li>
             </ul>
             <form className="d-flex" onSubmit={handleCart}>
+            <NavLink className="nav-link" to="/login" id="nav-font">Logout&emsp;&emsp;</NavLink>
               <button className="btn btn-outline-dark" type="submit" id="cart-font">
                 {/* <i className="bi-cart-fill me-1"></i> */}
                 Cart
