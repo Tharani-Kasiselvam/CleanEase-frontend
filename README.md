@@ -6,7 +6,7 @@
 
 ***Functionality***
 **Front-End**
-&emsp;a. Created separate components for the login and registration forms. Registered data are stored in the MongoDB collections.
+&emsp;a. Created separate components for the *Login* and *Registration* forms. Registered data are stored in the MongoDB collections. Designed a *"Forget Password?*" page, where the user enters Email Id. *Account Recovery* Page created to reset New Password
 &emsp;b. *Axios POST* operation performed to generate/publish token string and to store the new password into DB.   
 &emsp;c. *React Router DOM Provider* is used to route within pages.   
 &emsp;d. Toast from *react-bootstrap* is used to pop-up messages (*toast*) on screen using the ToastContainer.    
