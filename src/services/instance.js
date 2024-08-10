@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // define the base url for the API
-const baseURL = 'http://localhost:5001/';
+const baseURL = 'https://clean-ease-backend.onrender.com';
 
 // create an axios instance
 const instance = axios.create({
