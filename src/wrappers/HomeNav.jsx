@@ -16,7 +16,7 @@ const HomeNav = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid" id="glob-nav-div">
           <NavLink className="navbar-brand" to="/" id="glob-nav-font">
-          <img src="./src/assets/clean_logo.png" alt="ce_logo" style={{height:"30px",marginBottom:"10px", marginRight:"5px"}}/>CleanEase Portal</NavLink>
+          <img src="../clean_logo.png" alt="ce_logo" style={{height:"30px",marginBottom:"10px", marginRight:"5px"}}/>CleanEase Portal</NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
