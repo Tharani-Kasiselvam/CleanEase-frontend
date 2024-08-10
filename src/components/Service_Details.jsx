@@ -19,7 +19,7 @@ const Service_Details = () => {
 
     const pickDate = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000)
     const [serviceDate, setServiceDate] = useState(pickDate.toDateString())
-    const [selectedTime, setSelectedTime] = useState("")
+    const [selectedTime, setSelectedTime] = useState("08:00AM - 12:00PM")
 
     console.log("#verify Cart data###:", cart_service_list)
     // const cartCount = useSelector(selectCartCount);
